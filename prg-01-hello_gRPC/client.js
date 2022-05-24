@@ -8,7 +8,7 @@ const TARGET = `${HOST}:${PORT}`;
 const PROTO_PATH = __dirname + "/hello_grpc.proto";
 
 async function main() {
-    // dynamic .proto loader를 통해 .proto 읽어옴
+    // dynamic .proto loader를 통해 .proto 읽어옴 => stub
     const hello_proto = await protoLoader
         .load(PROTO_PATH, {
             /* empty options */
@@ -17,7 +17,7 @@ async function main() {
             return grpc.loadPackageDefinition(packageDefinition);
         });
 
-    // stub 생성
+    // gRPC 클라이언트 생성
     const client = new hello_proto.MyService(
         TARGET,
         grpc.credentials.createInsecure()
