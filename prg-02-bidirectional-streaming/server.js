@@ -14,7 +14,6 @@ function bidirectionalService(call) {
     });
 
     call.on("end", async (data) => {
-        console.log(call);
         call.end();
     });
 }

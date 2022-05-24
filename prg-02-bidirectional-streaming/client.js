@@ -15,10 +15,11 @@ async function send_messages(clientStream) {
         { message: "message #4" },
         { message: "message #5" },
     ];
-    messages.forEach(async (message) => {
+    messages.forEach((message) => {
         console.log(`[client to server] ${message.message}`);
         clientStream.write(message);
     });
+    clientStream.end();
 }
 
 async function main() {
