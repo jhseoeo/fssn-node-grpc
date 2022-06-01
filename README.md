@@ -1,3 +1,3 @@
-## gRPC examples on Node
+## 2022-1 FullStack Network Service Project
 
-2022-1 FullStack Network Service Project
+## gRPC examples on Node.js

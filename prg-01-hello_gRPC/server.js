@@ -26,6 +26,7 @@ async function main() {
     // 서버 바인드 및 시작
     server.bindAsync(TARGET, grpc.ServerCredentials.createInsecure(), () => {
         server.start();
+        console.log(`Starting server. Listening on port ${PORT}.`);
     });
 }
 
